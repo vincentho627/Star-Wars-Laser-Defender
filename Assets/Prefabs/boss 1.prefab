@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f38602548ae4516b85d691ae83831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 2500
   points: 200
   shotCounter: 0
   minTimeBetweenShots: 0.2
