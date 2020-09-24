@@ -39,7 +39,13 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnAllWaves()
+    public void resetBools()
+    {
+        called = false;
+        finishSpawn = false;
+    }
+
+    public IEnumerator SpawnAllWaves()
     {
         for (int i = 0; i < waveConfigs.Count - 1; i++)
         {

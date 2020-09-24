@@ -48,6 +48,12 @@ public class HyperSpace : MonoBehaviour
         rateOfLength = 0.2f;
     }
 
+    public void ResetBools()
+    {
+        callHyperSpace = false;
+        complete = false;
+    }
+
 
     public void RunHyperSpeed()
     {
@@ -72,7 +78,11 @@ public class HyperSpace : MonoBehaviour
             else
             {
                 ResetSpeed();
-                callHyperSpace = false;
+                ResetBools();
+                // call enemySpawner     
+                StartCoroutine(FindObjectOfType<EnemySpawner>().SpawnAllWaves());
+                FindObjectOfType<EnemySpawner>().resetBools();
+                FindObjectOfType<Cutscene>().resetBool();
             }
         }
         

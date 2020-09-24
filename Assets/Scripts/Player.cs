@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
             damageDealer.Hit();
         }
 
-        if (health < 0)
+        if (health <= 0)
         {
             Die();
         } else

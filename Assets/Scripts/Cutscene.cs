@@ -46,6 +46,14 @@ public class Cutscene : MonoBehaviour
         run = true;
     }
 
+    public void resetBool()
+    {
+        run = false;
+        call = true;
+        complete = false;
+        stall = true;
+    }
+
     public void StartCutscene()
     {
         if (tmp.a >= 0 && tmp.a <= 1 && !complete)

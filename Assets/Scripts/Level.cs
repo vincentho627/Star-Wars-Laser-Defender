@@ -12,6 +12,7 @@ public class Level : MonoBehaviour
     [SerializeField] float delayInSecondsGame = 0.8f;
     [SerializeField] List<Sprite> playerSprites;
     [SerializeField] GameObject resumePrefab;
+    [SerializeField] int level = 0;
 
     public void LoadStartMenu()
     {
