@@ -47,13 +47,27 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator SpawnAllWaves()
     {
-        for (int i = 0; i < waveConfigs.Count - 1; i++)
+        int choice = UnityEngine.Random.Range(0, 2);
+        Debug.Log(choice);
+        if (choice == 0)
         {
-            var currentWave = waveConfigs[i];
-            yield return new WaitForSeconds(currentWave.GetSpawnTime());
-            StartCoroutine(SpawnAllEnemiesInWave(currentWave));
-            
+            for (int i = 0; i < waveConfigs.Count - 1; i++)
+            {
+                var currentWave = waveConfigs[i];
+                yield return new WaitForSeconds(currentWave.GetSpawnTime());
+                StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+
+            }
+        } else
+        {
+            for (int i = waveConfigs.Count - 2; i >= 0; i--)
+            {
+                var currentWave = waveConfigs[i];
+                yield return new WaitForSeconds(currentWave.GetSpawnTime());
+                StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+            }
         }
+       
         finishSpawn = true;
     }
 
