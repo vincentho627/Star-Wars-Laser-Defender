@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,7 +48,6 @@ public class EnemySpawner : MonoBehaviour
     public IEnumerator SpawnAllWaves()
     {
         int choice = UnityEngine.Random.Range(0, 2);
-        Debug.Log(choice);
         if (choice == 0)
         {
             for (int i = 0; i < waveConfigs.Count - 1; i++)
