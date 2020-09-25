@@ -46,7 +46,7 @@ public class Cutscene : MonoBehaviour
         run = true;
     }
 
-    public void resetBool()
+    public void ResetBool()
     {
         run = false;
         call = true;

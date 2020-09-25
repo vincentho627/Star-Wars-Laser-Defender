@@ -26,9 +26,11 @@ public class GameSession : MonoBehaviour
     IEnumerator SetHyperSpace()
     {
         yield return new WaitForSeconds(2);
-        HyperSpace hyperSpace = FindObjectOfType<HyperSpace>();
-        hyperSpace.SetHyperSpace();
-        hyperSpace.PlayHyperSpaceSound();
+        if (FindObjectOfType<HyperSpace>()) {
+            HyperSpace hyperSpace = FindObjectOfType<HyperSpace>();
+            hyperSpace.SetHyperSpace();
+            hyperSpace.PlayHyperSpaceSound();
+        }
     }
 
     private void SetUpSingleton()

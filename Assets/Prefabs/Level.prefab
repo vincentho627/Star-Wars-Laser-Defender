@@ -51,3 +51,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b67186812e97b4088b40b50159ea61fb, type: 3}
   - {fileID: 21300000, guid: cdf8eaa6dffab4394b1278d3819d3259, type: 3}
   - {fileID: 21300000, guid: 97123e229b413423bb291414adff95b8, type: 3}
+  resumePrefab: {fileID: 2807521071482851522, guid: ca6829194b8ed4fc5b1c627c180607db, type: 3}
+  level: 1

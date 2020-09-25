@@ -81,8 +81,8 @@ public class HyperSpace : MonoBehaviour
                 ResetBools();
                 // call enemySpawner     
                 StartCoroutine(FindObjectOfType<EnemySpawner>().SpawnAllWaves());
-                FindObjectOfType<EnemySpawner>().resetBools();
-                FindObjectOfType<Cutscene>().resetBool();
+                FindObjectOfType<EnemySpawner>().ResetBools();
+                FindObjectOfType<Cutscene>().ResetBool();
             }
         }
         

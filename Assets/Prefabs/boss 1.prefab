@@ -107,6 +107,7 @@ MonoBehaviour:
   projectileSpeed: 20
   laserPrefab: {fileID: 163439595546274130, guid: 057ca81efcb914e98b766d4d48b03b5d, type: 3}
   particleExplosion: {fileID: 2540962449360808640, guid: 225843473e0854e6ca6449855b096787, type: 3}
+  shootingDamage: 100
   deathTime: 1
   shootVFX: {fileID: 8300000, guid: fcff2d5c2e3e445599088284c7b9f1eb, type: 3}
   shootingSoundVolume: 0.11

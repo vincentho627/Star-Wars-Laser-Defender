@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public void resetBools()
+    public void ResetBools()
     {
         called = false;
         finishSpawn = false;

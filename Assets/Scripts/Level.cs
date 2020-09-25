@@ -12,7 +12,7 @@ public class Level : MonoBehaviour
     [SerializeField] float delayInSecondsGame = 0.8f;
     [SerializeField] List<Sprite> playerSprites;
     [SerializeField] GameObject resumePrefab;
-    [SerializeField] int level = 0;
+    [SerializeField] int level = 1;
 
     public void LoadStartMenu()
     {
@@ -23,6 +23,16 @@ public class Level : MonoBehaviour
     {
         StartCoroutine(WaitAndLoadGame("Game"));
         FindObjectOfType<GameSession>().ResetGame();
+    }
+
+    public int GetLevel()
+    {
+        return level;
+    }
+
+    public void NextLevel()
+    {
+        level += 1;
     }
 
     public void SelectPlayer(int selection)

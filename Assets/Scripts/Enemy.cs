@@ -16,7 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float projectileSpeed = 20f;   
     [SerializeField] GameObject laserPrefab;
     [SerializeField] GameObject particleExplosion;
-  
+    [SerializeField] int shootingDamage;
+
     [Header("Sound Effects")]
     [SerializeField] float deathTime = 1f;
     [SerializeField] AudioClip shootVFX;
@@ -30,10 +31,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] float chanceOfSuccess = 0.9f;
     [SerializeField] float boostFallSpeed = 20f;
 
+
     // Start is called before the first frame update
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+        laserPrefab.GetComponent<DamageDealer>().SetDamage(shootingDamage * FindObjectOfType<Level>().GetLevel());
     }
 
     // Update is called once per frame
@@ -132,7 +135,7 @@ public class Enemy : MonoBehaviour
             if (isBoss)
             {
                 FindObjectOfType<GameSession>().HyperSpace();
-
+                FindObjectOfType<Level>().NextLevel();
             }
         }
     }
