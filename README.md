@@ -4,6 +4,6 @@ This is a laser defender game I have created as a fun project with a star wars t
 
 The goal of the game is simple, try to reach as many points as possible without dying. The controls for moving are the arrow keys whilst shooting is done with the spacebar.
 
-This game in this version currently ends after the first boss battle and the first teleportation to another galaxy through hyper space. There are many more battles to come and many more enemies to be defeated in the future.
+This game in this version currently has no end, there is a boss battle every level and a teleportation to another galaxy level through hyper space. There are many more battles to come and many more enemies to be defeated in the future.
 
 Please comment if you are interested or if you have any suggestions. Thanks!
